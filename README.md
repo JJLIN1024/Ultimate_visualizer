@@ -18,6 +18,14 @@
 - [ ] Control 
   - [ ] Sorting algorithm implmentation
   - [ ] Data structure's visualization implmentation
+   - [ ] BST
+   - [ ] Heap
+   - [ ] Stack
+   - [ ] Queue
+   #### (DS down below are optional)
+   - [ ] Linked-List
+   - [ ] Leftist heap
+
 - [ ] Model
   - [ ] User Registration
   - [ ] (optional) Email subscription
