@@ -1,4 +1,10 @@
-# Ultimate_visualizer
+# Ultimate_visualizer 
+
+## start webpage
+clone to your local machine, use "npm start"
+
+## start server
+clone to your local machine, use "npm run server"
 
 
 ## frontend
