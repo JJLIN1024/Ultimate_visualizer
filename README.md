@@ -1,10 +1,10 @@
 # Ultimate_visualizer 
 
 ## start webpage
-clone to your local machine, use "npm start"
+clone to your local machine, cd into frontend and use "npm install", then cd back to Ultimate_visualizer, use "npm start".
 
 ## start server
-clone to your local machine, use "npm run server"
+clone to your local machine, cd into backend and use "npm install", then cd back to Ultimate_visualizer, use "npm run server".
 
 
 ## frontend
