@@ -57,11 +57,11 @@ function ProductValues(props) {
                 alt="suitcase"
               />
               <Typography variant="h6" className={classes.title}>
-                The best luxury hotels
+                Sorting
               </Typography>
               <Typography variant="h5">
-                {'From the latest trendy boutique hotel to the iconic palace with XXL pool'}
-                {', go for a mini-vacation just a few subway stops away from your home.'}
+                {'Visualize sorting process. '}
+                {'Merge sort, Quick sort, Counting sort......'}
               </Typography>
             </div>
           </Grid>

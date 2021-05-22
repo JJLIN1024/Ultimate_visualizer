@@ -11,7 +11,7 @@ function Copyright() {
     <React.Fragment>
       {'© '}
       <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+        Ultimate-Visualizer
       </Link>{' '}
       {new Date().getFullYear()}
     </React.Fragment>
@@ -78,7 +78,7 @@ export default function AppFooter() {
   return (
     <Typography component="footer" className={classes.root}>
       <Container className={classes.container}>
-        <Grid container spacing={5}>
+        {/* <Grid container spacing={5}>
           <Grid item xs={6} sm={4} md={3}>
             <Grid
               container
@@ -86,21 +86,21 @@ export default function AppFooter() {
               justify="flex-end"
               className={classes.iconsWrapper}
               spacing={2}
-            >
-              <Grid item className={classes.icons}>
+            > */}
+              {/* <Grid item className={classes.icons}>
                 <a href="https://material-ui.com/" className={classes.icon}>
                   <img src="/static/themes/onepirate/appFooterFacebook.png" alt="Facebook" />
                 </a>
                 <a href="https://twitter.com/MaterialUI" className={classes.icon}>
                   <img src="/static/themes/onepirate/appFooterTwitter.png" alt="Twitter" />
                 </a>
-              </Grid>
-              <Grid item>
+              </Grid> */}
+              {/* <Grid item> */}
                 <Copyright />
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item xs={6} sm={4} md={2}>
+              {/* </Grid> */}
+            {/* </Grid> */}
+          {/* </Grid> */}
+          {/* <Grid item xs={6} sm={4} md={2}>
             <Typography variant="h6" marked="left" gutterBottom>
               Legal
             </Typography>
@@ -112,8 +112,8 @@ export default function AppFooter() {
                 <Link href="/premium-themes/onepirate/privacy/">Privacy</Link>
               </li>
             </ul>
-          </Grid>
-          <Grid item xs={6} sm={8} md={4}>
+          </Grid> */}
+          {/* <Grid item xs={6} sm={8} md={4}>
             <Typography variant="h6" marked="left" gutterBottom>
               Language
             </Typography>
@@ -130,8 +130,8 @@ export default function AppFooter() {
                 </option>
               ))}
             </TextField>
-          </Grid>
-          <Grid item>
+          </Grid> */}
+          {/* <Grid item>
             <Typography variant="caption">
               {'Icons made by '}
               <Link href="https://www.freepik.com" rel="sponsored" title="Freepik">
@@ -151,8 +151,8 @@ export default function AppFooter() {
                 CC 3.0 BY
               </Link>
             </Typography>
-          </Grid>
-        </Grid>
+          // </Grid> */}
+        {/* // </Grid> */}
       </Container>
     </Typography>
   );
