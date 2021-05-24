@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
-import ProductHeroLayout from './ProductHeroLayout';
+import IntroLayout from './IntroLayout';
 
 const backgroundImage =
   'https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80';
@@ -29,11 +29,11 @@ const styles = (theme) => ({
   },
 });
 
-function ProductHero(props) {
+function Intro(props) {
   const { classes } = props;
 
   return (
-    <ProductHeroLayout backgroundClassName={classes.background}>
+    <IntroLayout backgroundClassName={classes.background}>
       {/* Increase the network loading priority of the background image. */}
       <img style={{ display: 'none' }} src={backgroundImage} alt="increase priority" />
       <Typography color="inherit" align="center" variant="h2" marked="center">
@@ -48,19 +48,19 @@ function ProductHero(props) {
         size="large"
         className={classes.button}
         component="a"
-        href="/premium-themes/onepirate/sign-up/"
+        href="/ultimate-visualizer/sign-up/"
       >
         Register
       </Button>
       <Typography variant="body2" color="inherit" className={classes.more}>
         Discover the beauty of algorithm
       </Typography>
-    </ProductHeroLayout>
+    </IntroLayout>
   );
 }
 
-ProductHero.propTypes = {
+Intro.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ProductHero);
+export default withStyles(styles)(Intro);

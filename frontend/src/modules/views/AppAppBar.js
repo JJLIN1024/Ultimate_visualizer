@@ -48,7 +48,7 @@ function AppAppBar(props) {
             underline="none"
             color="inherit"
             className={classes.title}
-            href="/premium-themes/ultimate-visualizer/"
+            href="/ultimate-visualizer"
           >
             {'Ultimate Visualizer'}
           </Link>
@@ -58,7 +58,7 @@ function AppAppBar(props) {
               variant="h6"
               underline="none"
               className={classes.rightLink}
-              href="/premium-themes/ultimate-visualizer/sign-in/"
+              href="/ultimate-visualizer/sign-in/"
             >
               {'Sign In'}
             </Link>
@@ -66,7 +66,7 @@ function AppAppBar(props) {
               variant="h6"
               underline="none"
               className={clsx(classes.rightLink, classes.linkSecondary)}
-              href="/premium-themes/ultimate-visualizer/sign-up/"
+              href="/ultimate-visualizer/sign-up/"
             >
               {'Sign Up'}
             </Link>

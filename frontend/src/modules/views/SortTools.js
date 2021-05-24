@@ -99,7 +99,7 @@ const handleDSClick = () => {
   alert(2);
 }
 
-function ProductCategories(props) {
+function SortTools(props) {
   const { classes } = props;
 
   const images = [
@@ -137,6 +137,7 @@ function ProductCategories(props) {
               }}
               component={Link}
               to={`/ultimate-visualizer/${image.title}`}
+              target={`_blank`}
             >
               <div
                 className={classes.imageSrc}
@@ -164,8 +165,8 @@ function ProductCategories(props) {
   );
 }
 
-ProductCategories.propTypes = {
+SortTools.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ProductCategories);
+export default withStyles(styles)(SortTools);
