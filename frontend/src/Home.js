@@ -17,6 +17,7 @@ import SortingVisualizer from './modules/views/SortingVisualizer';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import ForgetPassword from './ForgotPassword';
+import DataStructureVisualizer from './modules/views/DataStructureVisualizer';
 
 function Index() {
   return (
@@ -31,6 +32,7 @@ function Index() {
             <AppFooter />
           </Route>
           <Route path="/ultimate-visualizer/Sorting" exact component={SortingVisualizer}/>
+          <Route path="/ultimate-visualizer/Data-Structure" exact component={DataStructureVisualizer}/>
           <Route path="/ultimate-visualizer/sign-in" exact component={SignIn}/>
           <Route path="/ultimate-visualizer/sign-up" exact component={SignUp}/>
           <Route path="/ultimate-visualizer/forgot-password/" exact component={ForgetPassword}/>
