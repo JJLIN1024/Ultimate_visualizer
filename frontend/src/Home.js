@@ -16,6 +16,7 @@ import AppAppBar from './modules/views/AppAppBar';
 import Sorting from './modules/views/Sorting';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
+import ForgetPassword from './ForgotPassword';
 
 function Index() {
   return (
@@ -32,6 +33,7 @@ function Index() {
           <Route path="/ultimate-visualizer/Sorting" exact component={Sorting}/>
           <Route path="/ultimate-visualizer/sign-in" exact component={SignIn}/>
           <Route path="/ultimate-visualizer/sign-up" exact component={SignUp}/>
+          <Route path="/ultimate-visualizer/forgot-password/" exact component={ForgetPassword}/>
         </Switch>
       </Router>
     </React.Fragment>
