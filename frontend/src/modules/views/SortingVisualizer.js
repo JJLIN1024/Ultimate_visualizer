@@ -15,16 +15,12 @@ import {getBogoSortAnimations} from './SortingAlgorithms/BogoSortVisualizer.js';
 
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
+import Slider from '@material-ui/core/Slider';
+import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
 
 import './css/SortingVisualizer.css';
-
-// Change this value for the speed of the animations.
-const ANIMATION_SPEED_MS = 1;
-
-// Change this value for the number of bars (value) in the array.
-const NUMBER_OF_ARRAY_BARS = 300;
 
 // This is the main color of the array bars.
 const PRIMARY_COLOR = 'turquoise';
@@ -39,11 +35,29 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
     },
   },
+  slider_root: {
+    width: 220,
+    display: 'flex',
+    '& > *': {
+      margin: theme.spacing(1),
+    }
+  },
 }));
 
 const SortingVisualizer = () => {
   const classes = useStyles();
   const [Data, setData] = useState([]);
+  const [animationSpeed, setAnimationSpeed] = React.useState(10);
+  const [arrayBars, setArrayBars] = React.useState(300);
+
+  const handleBarsChange = (event, newValue) => {
+    setArrayBars(newValue);
+  };
+
+  const handleAnimationSpeedChange = (event, newValue) => {
+    setAnimationSpeed(newValue);
+  };
+
   const randomIntFromInterval = (min,max) => {
     return Math.floor( Math.random()*  ( max - min + 1 ) + min );
   }
@@ -59,7 +73,7 @@ const SortingVisualizer = () => {
 
   const resetArray = () => {
     const array = [];
-    for (let i = 0; i < NUMBER_OF_ARRAY_BARS; i++) {
+    for (let i = 0; i < arrayBars; i++) {
       array.push(randomIntFromInterval(5, 650));
     }
     setData(array);
@@ -67,7 +81,7 @@ const SortingVisualizer = () => {
 
   useEffect(() => {
     resetArray();
-  }, []);
+  }, [arrayBars]);
 
   const mergeSort = () => {
     const animations = getMergeSortAnimations(Data);
@@ -82,13 +96,13 @@ const SortingVisualizer = () => {
         setTimeout(() => {
           barOneStyle.backgroundColor = color;
           barTwoStyle.backgroundColor = color;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       } else {
         setTimeout(() => {
           const [barOneIdx, newHeight] = animations[i];
           const barOneStyle = arrayBars[barOneIdx].style;
           barOneStyle.height = `${newHeight}px`;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       }
     }
   };
@@ -109,14 +123,14 @@ const SortingVisualizer = () => {
         setTimeout(() => {
           barOneStyle.backgroundColor = color;
           barTwoStyle.backgroundColor = color;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       } else {
         setTimeout(() => {
           const barOneIdx = animations[i][0];
           const newHeight = animations[i][1];
           const barOneStyle = arrayBars.item(barOneIdx).style;
           barOneStyle.height = `${newHeight}px`;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       }
     }
   };
@@ -135,14 +149,14 @@ const SortingVisualizer = () => {
         setTimeout(() => {
           barOneStyle.backgroundColor = color;
           barTwoStyle.backgroundColor = color;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       } else {
         setTimeout(() => {
           const barOneIdx = animations[i][0];
           const newHeight = animations[i][1];
           const barOneStyle = arrayBars.item(barOneIdx).style;
           barOneStyle.height = `${newHeight}px`;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       }
     }
   };
@@ -161,14 +175,14 @@ const SortingVisualizer = () => {
         setTimeout(() => {
           barOneStyle.backgroundColor = color;
           barTwoStyle.backgroundColor = color;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       } else {
         setTimeout(() => {
           const barOneIdx = animations[i][0];
           const newHeight = animations[i][1];
           const barOneStyle = arrayBars.item(barOneIdx).style;
           barOneStyle.height = `${newHeight}px`;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       }
     }
   };
@@ -187,14 +201,14 @@ const SortingVisualizer = () => {
         setTimeout(() => {
           barOneStyle.backgroundColor = color;
           barTwoStyle.backgroundColor = color;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       } else {
         setTimeout(() => {
           const barOneIdx = animations[i][0];
           const newHeight = animations[i][1];
           const barOneStyle = arrayBars.item(barOneIdx).style;
           barOneStyle.height = `${newHeight}px`;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       }
     }
   };
@@ -213,14 +227,14 @@ const SortingVisualizer = () => {
         setTimeout(() => {
           barOneStyle.backgroundColor = color;
           barTwoStyle.backgroundColor = color;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       } else {
         setTimeout(() => {
           const barOneIdx = animations[i][0];
           const newHeight = animations[i][1];
           const barOneStyle = arrayBars.item(barOneIdx).style;
           barOneStyle.height = `${newHeight}px`;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       }
     }
   };
@@ -239,14 +253,14 @@ const SortingVisualizer = () => {
         setTimeout(() => {
           barOneStyle.backgroundColor = color;
           barTwoStyle.backgroundColor = color;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       } else {
         setTimeout(() => {
           const barOneIdx = animations[i][0];
           const newHeight = animations[i][1];
           const barOneStyle = arrayBars.item(barOneIdx).style;
           barOneStyle.height = `${newHeight}px`;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       }
     }
   };
@@ -265,14 +279,14 @@ const SortingVisualizer = () => {
         setTimeout(() => {
           barOneStyle.backgroundColor = color;
           barTwoStyle.backgroundColor = color;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       } else {
         setTimeout(() => {
           const barOneIdx = animations[i][0];
           const newHeight = animations[i][1];
           const barOneStyle = arrayBars.item(barOneIdx).style;
           barOneStyle.height = `${newHeight}px`;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       }
     }
   };
@@ -291,14 +305,14 @@ const SortingVisualizer = () => {
         setTimeout(() => {
           barOneStyle.backgroundColor = color;
           barTwoStyle.backgroundColor = color;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       } else {
         setTimeout(() => {
           const barOneIdx = animations[i][0];
           const newHeight = animations[i][1];
           const barOneStyle = arrayBars.item(barOneIdx).style;
           barOneStyle.height = `${newHeight}px`;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       }
     }
   };
@@ -317,14 +331,14 @@ const SortingVisualizer = () => {
         setTimeout(() => {
           barOneStyle.backgroundColor = color;
           barTwoStyle.backgroundColor = color;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       } else {
         setTimeout(() => {
           const barOneIdx = animations[i][0];
           const newHeight = animations[i][1];
           const barOneStyle = arrayBars.item(barOneIdx).style;
           barOneStyle.height = `${newHeight}px`;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       }
     }
   };
@@ -343,14 +357,14 @@ const SortingVisualizer = () => {
         setTimeout(() => {
           barOneStyle.backgroundColor = color;
           barTwoStyle.backgroundColor = color;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       } else {
         setTimeout(() => {
           const barOneIdx = animations[i][0];
           const newHeight = animations[i][1];
           const barOneStyle = arrayBars.item(barOneIdx).style;
           barOneStyle.height = `${newHeight}px`;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       }
     }
   };
@@ -369,20 +383,52 @@ const SortingVisualizer = () => {
         setTimeout(() => {
           barOneStyle.backgroundColor = color;
           barTwoStyle.backgroundColor = color;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       } else {
         setTimeout(() => {
           const barOneIdx = animations[i][0];
           const newHeight = animations[i][1];
           const barOneStyle = arrayBars.item(barOneIdx).style;
           barOneStyle.height = `${newHeight}px`;
-        }, i * ANIMATION_SPEED_MS);
+        }, i * animationSpeed);
       }
     }
   };
 
   return (
     <React.Fragment>
+      <div className={classes.slider_root} 
+          style={{
+                marginTop: `${30}px`,
+              }}>
+        <Typography id="continuous-slider" gutterBottom>
+          Bars
+        </Typography>
+        <Slider value={arrayBars} 
+            onChange={handleBarsChange} 
+            aria-labelledby="discrete-slider"
+            min={10}
+            max={300}
+            marks
+            valueLabelDisplay="auto"
+            track='inverted'
+        />
+      </div>
+      <div className={classes.slider_root}>
+        <Typography id="continuous-slider" gutterBottom>
+          Speed
+        </Typography>
+        <Slider value={animationSpeed} 
+            onChange={handleAnimationSpeedChange}
+            aria-labelledby="discrete-slider" 
+            min={0.1}
+            max={100}
+            marks
+            valueLabelDisplay="auto"
+            // track="inverted"
+            scale={(x) => 100 - x + 0.1}
+        />
+      </div>
       <div className={classes.root}>
         <ButtonGroup color="primary" aria-label="outlined primary button group" orientation="vertical" className={`btn-group`}>
               <Button color="secondary" variant="contained"onClick={resetArray}>Generate New Array</Button>
@@ -402,7 +448,10 @@ const SortingVisualizer = () => {
               <Button onClick={gnomeSort}>Gnome sort</Button>
         </ButtonGroup>
       </div>
-      <div className="array-container">
+      <div className="array-container"
+            style={{
+              left: `${230 + (300 - arrayBars)}px`
+            }}>
           {Data.map((value, idx) => (
             <div
               className="array-bar"
@@ -410,6 +459,7 @@ const SortingVisualizer = () => {
               style={{
                 backgroundColor: PRIMARY_COLOR,
                 height: `${value}px`,
+                width: `${600/arrayBars}px`,
               }}></div>
           ))}
       </div>
