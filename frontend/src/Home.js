@@ -13,7 +13,7 @@ import AppFooter from './modules/views/AppFooter';
 import Intro from './modules/views/Intro';
 import EmailService from './modules/views/EmailService';
 import AppAppBar from './modules/views/AppAppBar';
-import Sorting from './modules/views/Sorting';
+import SortingVisualizer from './modules/views/SortingVisualizer';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import ForgetPassword from './ForgotPassword';
@@ -30,7 +30,7 @@ function Index() {
             <EmailService />
             <AppFooter />
           </Route>
-          <Route path="/ultimate-visualizer/Sorting" exact component={Sorting}/>
+          <Route path="/ultimate-visualizer/Sorting" exact component={SortingVisualizer}/>
           <Route path="/ultimate-visualizer/sign-in" exact component={SignIn}/>
           <Route path="/ultimate-visualizer/sign-up" exact component={SignUp}/>
           <Route path="/ultimate-visualizer/forgot-password/" exact component={ForgetPassword}/>

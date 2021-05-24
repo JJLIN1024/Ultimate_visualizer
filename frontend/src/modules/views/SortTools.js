@@ -11,7 +11,7 @@ import { withStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
-import Sorting from './Sorting';
+import SortingVisualizer from './SortingVisualizer';
 
 const styles = (theme) => ({
   root: {
