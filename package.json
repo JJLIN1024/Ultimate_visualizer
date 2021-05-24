@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/JJLIN1024/Ultimate_visualizer/issues"
   },
-  "homepage": "https://github.com/JJLIN1024/Ultimate_visualizer#readme"
+  "homepage": "https://github.com/JJLIN1024/Ultimate_visualizer#readme",
+  "dependencies": {
+    "react-router-dom": "^5.2.0"
+  }
 }

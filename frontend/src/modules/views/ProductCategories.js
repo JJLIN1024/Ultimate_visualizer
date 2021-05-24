@@ -1,9 +1,17 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
+import Sorting from './Sorting';
 
 const styles = (theme) => ({
   root: {
@@ -83,6 +91,14 @@ const styles = (theme) => ({
   },
 });
 
+const handleSortClick = () => {
+  alert(1);
+};
+
+const handleDSClick = () => {
+  alert(2);
+}
+
 function ProductCategories(props) {
   const { classes } = props;
 
@@ -92,52 +108,59 @@ function ProductCategories(props) {
         'https://images.unsplash.com/photo-1603880920696-faf1d9ccc6a3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80',
       title: 'Sorting',
       width: '40%',
+      handleClick: handleSortClick,
     },
     {
       url:
         'https://images.unsplash.com/photo-1519817914152-22d216bb9170?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=802&q=80',
-      title: 'Data Structure',
+      title: 'Data-Structure',
       width: '60%',
+      handleClick: handleDSClick,
     },
     
   ];
 
   return (
-    <Container className={classes.root} component="section">
-      <Typography variant="h4" marked="center" align="center" component="h2">
-        For all ideas to be visualized
-      </Typography>
-      <div className={classes.images}>
-        {images.map((image) => (
-          <ButtonBase
-            key={image.title}
-            className={classes.imageWrapper}
-            style={{
-              width: image.width,
-            }}
-          >
-            <div
-              className={classes.imageSrc}
+    <Router>
+      {/* <Route path='/premium-themes/ultimate-visualizer/Sorting' component={Sorting}/> */}
+      <Container className={classes.root} component="section">
+        <Typography variant="h4" marked="center" align="center" component="h2">
+          For all ideas to be visualized
+        </Typography>
+        <div className={classes.images}>
+          {images.map((image) => (
+            <ButtonBase
+              key={image.title}
+              className={classes.imageWrapper}
               style={{
-                backgroundImage: `url(${image.url})`,
+                width: image.width,
               }}
-            />
-            <div className={classes.imageBackdrop} />
-            <div className={classes.imageButton}>
-              <Typography
-                component="h3"
-                variant="h6"
-                color="inherit"
-                className={classes.imageTitle}
-              >
-                {image.title}
-                <div className={classes.imageMarked} />
-              </Typography>
-            </div>
-          </ButtonBase>
-        ))}
-      </div>
-    </Container>
+              component={Link}
+              to={`/ultimate-visualizer/${image.title}`}
+            >
+              <div
+                className={classes.imageSrc}
+                style={{
+                  backgroundImage: `url(${image.url})`,
+                }}
+              />
+              <div className={classes.imageBackdrop} />
+              <div className={classes.imageButton}>
+                <Typography
+                  component="h3"
+                  variant="h6"
+                  color="inherit"
+                  className={classes.imageTitle}
+                >
+                  {image.title}
+                  <div className={classes.imageMarked} />
+                </Typography>
+              </div>
+            </ButtonBase>
+          ))}
+        </div>
+      </Container>
+    </Router>
   );
 }
 
