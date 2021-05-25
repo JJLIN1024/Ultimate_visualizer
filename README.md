@@ -8,12 +8,12 @@ clone to your local machine, cd into backend and use "npm install", then cd back
 
 
 ## frontend
-- [ ] Layout -> React
-  - [ ] NavBar
-  - [ ] Sorting's Part
+- [x] Layout -> React
+  - [x] NavBar
+  - [x] Sorting's Part
   - [ ] Data structure's visualization
-  - [ ] Registration form
-  - [ ] (optional) Email subscription
+  - [x] Registration form
+  - [x] (optional) Email subscription
 - [ ] API call -> Axios
   - [ ] Sorting's Part
   - [ ] Data structure's visualization
