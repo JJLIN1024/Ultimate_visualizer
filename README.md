@@ -12,6 +12,14 @@ clone to your local machine, cd into backend and use "npm install", then cd back
   - [x] NavBar
   - [x] Sorting's Part
   - [ ] Data structure's visualization
+   - [ ] Stack
+   - [ ] Queue
+   - [x] BST
+   - [x] Min Heap
+   - [x] Max Heap
+   - [x] AVL tree
+   - [x] Trie
+   - [x] Red black tree
   - [x] Registration form
   - [x] (optional) Email subscription
 - [ ] API call -> Axios
