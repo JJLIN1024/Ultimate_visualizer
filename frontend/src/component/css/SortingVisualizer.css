@@ -1,7 +1,15 @@
 
+.sort-Containe {
+  width: 80%;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: 20% 80%
+}
+
+.sort-Container {
+  margin-top: 3rem
 }
 
 .control {
@@ -19,6 +27,7 @@
 }
 
 .array-container {
-  position: absolute;
-  top: 130px;
+  margin-top: 3rem;
+  width: 100%;
 }
+

@@ -17,6 +17,7 @@ import Slider from '@material-ui/core/Slider';
 import Typography from '@material-ui/core/Typography';
 import { Container } from '@material-ui/core';
 import './css/SortingVisualizer.css';
+
 // This is the main color of the array bars.
 const PRIMARY_COLOR = 'turquoise';
 
@@ -26,8 +27,9 @@ const SECONDARY_COLOR = 'red';
 const SortingVisualizer = () => {
   const [Data, setData] = useState([]);
   const [animationSpeed, setAnimationSpeed] = useState(10);
-  const [arrayBars, setArrayBars] = useState(170);
-
+  const [arrayBars, setArrayBars] = useState(100);
+  const [arrayBarsWidth, setArrayBarsWidth] = useState(4);
+  
   const handleBarsChange = (event, newValue) => {
     setArrayBars(newValue);
   };
@@ -57,8 +59,15 @@ const SortingVisualizer = () => {
     setData(array);
   };
 
+  const resetBarsWidth = () => {
+    const ContainerWidth = document.getElementById('array-container').parentNode.offsetWidth;
+    const arrayBarWidth = (ContainerWidth - arrayBars) * 0.57 / arrayBars; 
+    setArrayBarsWidth(arrayBarWidth);
+  };
+
   useEffect(() => {
     resetArray();
+    resetBarsWidth();
   }, [arrayBars]);
 
   const mergeSort = () => {
@@ -374,7 +383,7 @@ const SortingVisualizer = () => {
   };
 
   return (
-    <Container maxWidth='lg' style={{ height: '100vh'}}>
+    <Container maxWidth='lg' style={{ height: '100vh'}} className="sort-Container">
       <div className="wrapper">
         <div className="control">
           <div className="upperControl">
@@ -418,10 +427,7 @@ const SortingVisualizer = () => {
                   <Button onClick={gnomeSort}>Gnome sort</Button>
           </ButtonGroup>
         </div>
-        <div className="array-container"
-              style={{
-                left: `${230 + (300 - arrayBars)}px`
-              }}>
+        <div id="array-container" className="array-container">
             {Data.map((value, idx) => (
               <div
                 className="array-bar"
@@ -429,7 +435,7 @@ const SortingVisualizer = () => {
                 style={{
                   backgroundColor: PRIMARY_COLOR,
                   height: `${value}px`,
-                  width: `${600/arrayBars}px`,
+                  width: `${arrayBarsWidth}px`,
                 }}></div>
             ))}
           </div>
