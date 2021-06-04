@@ -25,17 +25,17 @@ function Index() {
       <Router>
         <AppAppBar />
         <Switch>
-          <Route path="/ultimate-visualizer" exact>
+          <Route path="/" exact>
             <Intro />
             <SortTools />
             <EmailService />
             <AppFooter />
           </Route>
-          <Route path="/ultimate-visualizer/Sorting" exact component={SortingVisualizer}/>
-          <Route path="/ultimate-visualizer/Data-Structure" exact component={DataStructureVisualizer}/>
-          <Route path="/ultimate-visualizer/sign-in" exact component={SignIn}/>
-          <Route path="/ultimate-visualizer/sign-up" exact component={SignUp}/>
-          <Route path="/ultimate-visualizer/forgot-password/" exact component={ForgetPassword}/>
+          <Route path="/Sorting" exact component={SortingVisualizer}/>
+          <Route path="/Data-Structure" exact component={DataStructureVisualizer}/>
+          <Route path="/sign-in" exact component={SignIn}/>
+          <Route path="/sign-up" exact component={SignUp}/>
+          <Route path="/forgot-password/" exact component={ForgetPassword}/>
         </Switch>
       </Router>
     </React.Fragment>

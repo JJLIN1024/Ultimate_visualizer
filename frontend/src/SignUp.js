@@ -13,6 +13,7 @@ import { email, required } from './modules/form/validation';
 import RFTextField from './modules/form/RFTextField';
 import FormButton from './modules/form/FormButton';
 import FormFeedback from './modules/form/FormFeedback';
+import BaseAxiosInstance from './Axios';
 
 const useStyles = makeStyles((theme) => ({
   form: {

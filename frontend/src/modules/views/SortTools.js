@@ -136,7 +136,7 @@ function SortTools(props) {
                 width: image.width,
               }}
               component={Link}
-              to={`/ultimate-visualizer/${image.title}`}
+              to={`/${image.title}`}
               target={`_blank`}
             >
               <div

@@ -48,7 +48,7 @@ function Intro(props) {
         size="large"
         className={classes.button}
         component="a"
-        href="/ultimate-visualizer/sign-up/"
+        href="/sign-up"
       >
         Register
       </Button>
