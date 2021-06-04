@@ -1,25 +1,16 @@
 {
-  "name": "Ultimate_visualizer",
+  "name": "temp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": {
+    "frontend": "App.js",
+    "backend": "Server.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd frontend && npm start",
     "server": "cd backend && npm run server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JJLIN1024/Ultimate_visualizer.git"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JJLIN1024/Ultimate_visualizer/issues"
-  },
-  "homepage": "https://github.com/JJLIN1024/Ultimate_visualizer#readme",
-  "dependencies": {
-    "react-router-dom": "^5.2.0"
-  }
+  "license": "ISC"
 }

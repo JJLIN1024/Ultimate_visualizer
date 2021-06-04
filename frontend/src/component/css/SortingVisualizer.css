@@ -1,0 +1,24 @@
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 20% 80%
+}
+
+.control {
+  z-index: 100;
+}
+
+.upperControl {
+  margin-top: 2rem;
+  width: 90%;
+}
+
+.array-bar {
+  display: inline-block;
+  margin: 0 1px;
+}
+
+.array-container {
+  position: absolute;
+  top: 130px;
+}
