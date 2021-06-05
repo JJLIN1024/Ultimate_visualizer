@@ -16,6 +16,7 @@ export default function NavBar() {
               <Button size="large" 
               color="inherit" 
               href="/"
+              className="Home-Btn"
               >Ultimate Visualizer</Button>
             </Toolbar>
           </Grid>

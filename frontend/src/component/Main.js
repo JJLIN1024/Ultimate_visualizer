@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import ShowCase from './Main/ShowCase';
 import SortingIntro from './Main/SortingIntro';
 import DataStructureIntro from './Main/DataStructureIntro';
+import EmailService from './Main/EmailService';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,17 +33,30 @@ export default function Main() {
 
   return (
     <React.Fragment>
-      <div className={classes.root}>
-        <ShowCase />
-      </div>
-      <Grid justify="space-around" container spacing={24} lg="auto">
-        <Grid item> 
+      <Grid justify="space-around" container spacing={12} lg="auto"
+        style={{
+          padding: "1rem"
+        }}>
+        <Grid item 
+          style={{
+          margin: "1rem"
+        }}>
+          <ShowCase />
+        </Grid>
+        <Grid item > 
           <SortingIntro />
         </Grid>
-        <Grid item>
+        <Grid item >
           <DataStructureIntro />
         </Grid>
+        <Grid item
+        style={{
+          margin: "1rem"
+        }}>
+          <EmailService />
+        </Grid>
       </Grid>
+
     </React.Fragment>
     
   );
