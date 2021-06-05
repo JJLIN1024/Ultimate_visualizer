@@ -7,7 +7,7 @@ passport.use(
     clientID: keys.google.GOOGLE_CLINET_ID,
     clientSecret: keys.google.clientSecret,
     callbackURL:'/auth/google/redirect'
-  }, ()=>{
+  }, ( accessToken, refreshToken, profile, done ) => {
     ;
   })
 )

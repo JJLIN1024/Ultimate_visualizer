@@ -12,10 +12,15 @@ router.get('/logout', (req, res) => {
 })
 
 // auth login
-router.get('/google', (req, res) => {
+router.get('/google', 
   passport.authenticate('google', {
     scope: ['profile']
-  });
+  })
+);
+
+// auth redirect
+router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
+  res.json({message: "redirecting"})
 })
 
 module.exports = router;
