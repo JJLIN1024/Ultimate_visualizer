@@ -1,19 +1,10 @@
-@mixin buttonColorGlow($c1, $c2) {
-  color: $c1;
-  text-shadow: 0px -1px 1px $c2;
-}
-
-//Background Color
-$BGColor: white;
-
 .DataStructureVisualizer {
   text-align: center;
 }
 
-//Styling top menu
 body,
 html {
-  background-color: $BGColor;
+  background-color: white;
 }
 
 body,
@@ -27,27 +18,24 @@ button {
   font-size: 16px;
 }
 
-// div,
-// p {
-//   color: #babecc;
-//   text-shadow: 1px 1px 1px #fff;
-// }
+div,
+p {
+  color: #babecc;
+  text-shadow: 1px 1px 1px #fff;
+}
 
 p {
   margin: 0;
 }
 
 .heading {
-  background-color: $BGColor;
-  // padding: 5px;
-  // padding: 120px 0;
+  background-color: white;
   left: 250px;
   text-align: center;
   height: 55px;
-  // display: inline-block;
   display: absolute;
   padding: 0px;
-  color: rgb(85, 85, 85);
+  color: #555555;
 }
 
 button,
@@ -57,21 +45,16 @@ input {
   font-size: 14px;
   border-radius: 320px;
   padding: 16px;
-  background-color: $BGColor;
+  background-color: white;
   text-shadow: 1px 1px 0 #fff;
   margin: 5px;
 }
+
 .i {
   position: absolute;
   padding: 0px;
   margin-left: 10px;
 }
-
-// .heading {
-//   display: inline-block;
-//   padding: 0px;
-//   color: rgb(85, 85, 85);
-// }
 
 .main-menu-button {
   display: block;
@@ -85,17 +68,7 @@ input {
     top: 100px;
   }
 }
-
-// div.menu ul {
-//   list-style: none;
-//   padding: 0;
-//   margin: 0;
-//   // left: 250px;
-//   margin-bottom: 50px;
-// }
 .menu ul {
-  // left: 10%;
-  // right: 7%;
   position: inline-block;
 }
 
@@ -104,11 +77,11 @@ input {
     width: 50%;
     margin: 0 auto;
   }
+
   div.menu {
     margin-top: 100px;
   }
 }
-
 div.menu.trie ul {
   margin-bottom: 0px;
 }
@@ -125,24 +98,25 @@ input {
   appearance: none;
   -webkit-appearance: none;
 }
+
 input:focus {
   box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
 }
 
-// button {
-//   color: #61677c;
-//   font-weight: bold;
-//   box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
-//   transition: all 0.2s ease-in-out;
-//   cursor: pointer;
-//   font-weight: 600;
-// }
+button {
+  color: #61677c;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+}
 
-// button:hover {
-//   box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
-//   color: #3975e4;
-//   text-shadow: 0px -1px 1px rgba(0, 132, 255, 0.2);
-// }
+button:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+  color: #3975e4;
+  text-shadow: 0px -1px 1px rgba(0, 132, 255, 0.2);
+}
 
 #mainAVL button:hover,
 #mainBST button:hover,
@@ -153,38 +127,57 @@ input:focus {
   box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
   color: #d69e2e;
   text-shadow: 0px -1px 1px #d69e2e4d;
-  &.delete {
-    color: #e43939;
-    text-shadow: 0px -1px 1px rgba(255, 0, 0, 0.2);
-  }
-
-  &.insert {
-    color: #3fda31;
-    text-shadow: 0px -1px 1px rgba(0, 255, 21, 0.2);
-  }
-
-  &:active {
-    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
-  }
+}
+#mainAVL button:hover.delete,
+#mainBST button:hover.delete,
+#mainMaxH button:hover.delete,
+#mainMinH button:hover.delete,
+#mainRedB button:hover.delete,
+#mainTrie button:hover.delete {
+  color: #e43939;
+  text-shadow: 0px -1px 1px rgba(255, 0, 0, 0.2);
+}
+#mainAVL button:hover.insert,
+#mainBST button:hover.insert,
+#mainMaxH button:hover.insert,
+#mainMinH button:hover.insert,
+#mainRedB button:hover.insert,
+#mainTrie button:hover.insert {
+  color: #3fda31;
+  text-shadow: 0px -1px 1px rgba(0, 255, 21, 0.2);
+}
+#mainAVL button:hover:active,
+#mainBST button:hover:active,
+#mainMaxH button:hover:active,
+#mainMinH button:hover:active,
+#mainRedB button:hover:active,
+#mainTrie button:hover:active {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
 }
 
 #mainBST button:hover {
-  @include buttonColorGlow(#4299e1, #4299e159);
+  color: #4299e1;
+  text-shadow: 0px -1px 1px #4299e159;
 }
 
 #mainMaxH button:hover {
-  @include buttonColorGlow(#9f7aea, #9f7aea59);
+  color: #9f7aea;
+  text-shadow: 0px -1px 1px #9f7aea59;
 }
 
 #mainMinH button:hover {
-  @include buttonColorGlow(#ed64a6, #ed64a659);
+  color: #ed64a6;
+  text-shadow: 0px -1px 1px #ed64a659;
 }
+
 #mainRedB button:hover {
-  @include buttonColorGlow(#ed8936, #ed893659);
+  color: #ed8936;
+  text-shadow: 0px -1px 1px #ed893659;
 }
 
 #mainTrie button:hover {
-  @include buttonColorGlow(#667eea, #667eea59);
+  color: #667eea;
+  text-shadow: 0px -1px 1px #667eea59;
 }
 
 button:active {
@@ -200,7 +193,7 @@ button:active {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: $BGColor;
+  background-color: white;
   border-radius: 20px;
   width: 100%;
   height: 180px;
@@ -209,6 +202,7 @@ button:active {
   box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
   z-index: 1;
 }
+
 .dropdown-content button {
   position: relative;
   right: 50%;
@@ -229,7 +223,6 @@ button:active {
     transform: scale(1);
   }
 }
-
 .traversal,
 .bstlist {
   margin: 10px 10px;
@@ -273,3 +266,5 @@ button:active {
     top: 220px;
   }
 }
+
+/*# sourceMappingURL=DataStructureVisualizer.css.map */

@@ -1,8 +1,4 @@
 
-.sort-Containe {
-  width: 80%;
-}
-
 .wrapper {
   display: grid;
   grid-template-columns: 20% 80%
