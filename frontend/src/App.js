@@ -4,8 +4,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
+
 import { Container } from '@material-ui/core';
 import NavBar from './component/NavBar/NavBar';
 import Main from './component/Main';

@@ -4,6 +4,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import { ButtonGroup } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
+import { Link } from "react-router-dom";
+
 import './NavBar.css';
 
 export default function NavBar() {
@@ -23,8 +25,14 @@ export default function NavBar() {
           <Grid item>
             <Toolbar >
               <ButtonGroup color="inherit" aria-label="outlined primary button group">
-                <Button size="large" color="inherit">Login</Button>
-                <Button size="large" color="inherit">SignIn</Button>
+                <Button size="large" 
+                      color="inherit"
+                      component={Link}
+                      to={'/sign-in'}>Login</Button>
+                <Button size="large" 
+                      color="inherit"
+                      component={Link}
+                      to={'/sign-up'}>Sign Up</Button>
               </ButtonGroup>
             </Toolbar>
           </Grid>
