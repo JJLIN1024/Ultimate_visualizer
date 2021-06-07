@@ -111,13 +111,6 @@ export default function SignUp() {
             Sign Up
           </Button>
 
-          {/* <Button
-            variant="outlined"
-            color="primary"
-            startIcon={<FontAwesomeIcon icon={google} />}
-          >
-            Delete
-          </Button> */}
           <Grid container justify="flex-end">
             <Grid item>
               <Link href="/sign-in" variant="body2">

@@ -1,26 +1,15 @@
 const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth20');
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const keys = require('./keys');
 const User = require('../models/user');
 
-passport.serializeUser((user, done) => {
-  done(null, user.id)
-})
-
-passport.deserializeUser((user, done) => {
-  User.findById(id)
-  .then((user) => {
-    done(null, user)
-  })
-})
 
 passport.use(
   new GoogleStrategy({
     clientID: keys.google.GOOGLE_CLINET_ID,
     clientSecret: keys.google.GOOGLE_CLINET_SECRET,
-    callbackURL:'/auth/google/redirect'
+    callbackURL:'/auth/google/redirect',
   }, ( accessToken, refreshToken, profile, done ) => {
-
     User.findOne({googleID: profile.id})
     .then((currentUser) => {
       if(currentUser) {
@@ -39,12 +28,20 @@ passport.use(
         })
       }
     })
-
-    
-
   })
 )
 
+
+passport.serializeUser((user, done) => {
+  done(null, user.id)
+})
+
+passport.deserializeUser((user, done) => {
+  User.findById(user.id)
+  .then((user) => {
+    done(null, user)
+  })
+})
 
 
 

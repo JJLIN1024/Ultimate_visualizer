@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import './NavBar.css';
 
 export default function NavBar() {
+  const logoutUrl = 'http://localhost:5000/logout';
 
   return (
       <AppBar position="sticky" color="inherit" className="NavBar">
@@ -33,6 +34,10 @@ export default function NavBar() {
                       color="inherit"
                       component={Link}
                       to={'/sign-up'}>Sign Up</Button>
+                <Button size="large" 
+                      color="inherit"
+                      href={logoutUrl}
+                      >Logout</Button>
               </ButtonGroup>
             </Toolbar>
           </Grid>

@@ -1,17 +1,10 @@
 const router = require('express').Router()
 const passport = require('passport');
+const successLoginUrl = "http://localhost:3000/pro";
+const failureLoginUrl = "http://localhost:3000/sign-in";
 
-// auth login
-router.get('/login', (req, res) => {
-  res.json({message: 'Auth Login!'});
-})
 
-// auth login
-router.get('/logout', (req, res) => {
-  res.json({message: 'Auth logout!'});
-})
-
-// auth login
+// google authenticate
 router.get('/google', 
   passport.authenticate('google', {
     scope: ['profile']
@@ -19,8 +12,10 @@ router.get('/google',
 );
 
 // auth redirect
-router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-  res.json({message: "redirecting"})
-})
+router.get('/google/redirect', passport.authenticate('google', {
+  successRedirect: successLoginUrl,
+  failureRedirect: failureLoginUrl,
+  failureFlash:  'Invalid google account, please choose another way to sign in : ('
+}))
 
 module.exports = router;
