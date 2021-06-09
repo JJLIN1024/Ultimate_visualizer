@@ -1,11 +1,11 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from "react";
 
 function useDelError(depend) {
-  const [delError, setDelError] = useState(false)
-  useEffect(() => {
-		setDelError(false)
-	}, [depend])
-  return [delError, setDelError]
+    const [delError, setDelError] = useState(false);
+    useEffect(() => {
+        setDelError(false);
+    }, [depend]);
+    return [delError, setDelError];
 }
 
-export default useDelError
+export default useDelError;

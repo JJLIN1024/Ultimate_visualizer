@@ -1,5 +1,5 @@
 body {
-  position: relative;
+    position: relative;
 }
 
 #bst button,
@@ -8,13 +8,13 @@ body {
 #minheap button,
 #maxheap button,
 #redb button {
-  width: 30%;
-  position: absolute;
-  height: 170px;
-  top: 90px;
-  left: 2%;
-  border-radius: 100px;
-  font-size: 50px;
+    width: 30%;
+    position: absolute;
+    height: 170px;
+    top: 90px;
+    left: 2%;
+    border-radius: 100px;
+    font-size: 50px;
 }
 #bst button:hover,
 #trie button:hover,
@@ -22,94 +22,94 @@ body {
 #minheap button:hover,
 #maxheap button:hover,
 #redb button:hover {
-  color: #4299e1;
-  text-shadow: 0px -1px 5px #4299e159;
+    color: #4299e1;
+    text-shadow: 0px -1px 5px #4299e159;
 }
 
 #trie button {
-  left: 34.5%;
+    left: 34.5%;
 }
 #trie button:hover {
-  color: #667eea;
-  text-shadow: 0px -1px 5px #667eea59;
+    color: #667eea;
+    text-shadow: 0px -1px 5px #667eea59;
 }
 
 #avl button {
-  left: 67%;
+    left: 67%;
 }
 #avl button:hover {
-  color: #d69e2e;
-  text-shadow: 0px -1px 5px #d69e2e59;
+    color: #d69e2e;
+    text-shadow: 0px -1px 5px #d69e2e59;
 }
 
 #minheap button {
-  left: 2%;
-  top: 290px;
+    left: 2%;
+    top: 290px;
 }
 #minheap button:hover {
-  color: #ed64a6;
-  text-shadow: 0px -1px 5px #ed64a659;
+    color: #ed64a6;
+    text-shadow: 0px -1px 5px #ed64a659;
 }
 
 #maxheap button {
-  left: 34.5%;
-  top: 290px;
+    left: 34.5%;
+    top: 290px;
 }
 #maxheap button:hover {
-  color: #9f7aea;
-  text-shadow: 0px -1px 5px #9f7aea59;
+    color: #9f7aea;
+    text-shadow: 0px -1px 5px #9f7aea59;
 }
 
 #redb button {
-  left: 67%;
-  top: 290px;
+    left: 67%;
+    top: 290px;
 }
 #redb button:hover {
-  color: #ed8936;
-  text-shadow: 0px -1px 5px #ed893659;
+    color: #ed8936;
+    text-shadow: 0px -1px 5px #ed893659;
 }
 
 .list-data {
-  list-style: none;
+    list-style: none;
 }
 
 .list-data li {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 800px) {
-  #bst,
-#trie,
-#avl,
-#redb,
-#maxheap,
-#minheap {
-    width: 95%;
-    margin: 1000px auto;
-  }
+    #bst,
+    #trie,
+    #avl,
+    #redb,
+    #maxheap,
+    #minheap {
+        width: 95%;
+        margin: 1000px auto;
+    }
 
-  .main-header h1 .i {
-    position: absolute;
-    right: 2%;
-    top: 2%;
-  }
+    .main-header h1 .i {
+        position: absolute;
+        right: 2%;
+        top: 2%;
+    }
 
-  #bst button,
-#trie button,
-#avl button,
-#redb button,
-#maxheap button,
-#minheap button {
-    position: relative;
-    right: 0;
-    left: 100;
-    top: 0;
-    margin: 0;
-    height: 170px;
-    font-size: 30px;
-    border-radius: 50px;
-    width: 100%;
-  }
+    #bst button,
+    #trie button,
+    #avl button,
+    #redb button,
+    #maxheap button,
+    #minheap button {
+        position: relative;
+        right: 0;
+        left: 100;
+        top: 0;
+        margin: 0;
+        height: 170px;
+        font-size: 30px;
+        border-radius: 50px;
+        width: 100%;
+    }
 }
 
 /*# sourceMappingURL=mainMenuStyle.css.map */
