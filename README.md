@@ -16,6 +16,7 @@ To get a local copy up and running follow these simple steps.
 1. Install [Node.js](https://nodejs.org/en/download/).
 2. Install [npm](https://www.npmjs.com/get-npm).
 3. Install depenencies for frontend and backend respectively.
+
    For frontend:
     ```bash
         cd frontend && npm install
