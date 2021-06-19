@@ -8,18 +8,21 @@ export function getGnomeSortAnimations(array) {
 function GnomeSortHelper(arr, animations) {
     let n = arr.length;
     for (let i = 1; i < n; i++) {
-        let current = arr[i];
-        let j = i - 1;
-        while (j > -1 && current < arr[j]) {
-            animations.push([j, i, "color-change-start"]);
-            animations.push([j, i, "color-change-revert"]);
-
-            animations.push([j + 1, arr[j]], "height-change");
-
-            arr[j + 1] = arr[j];
-            j--;
+        animations.push([i, i-1, "color-change-start"]);
+        animations.push([i, i-1, "color-change-revert"]);
+        if (arr[i-1] > arr[i]) {
+            for( let k = i; k > 0; k--){
+                animations.push([k, k-1, "color-change-start"]);
+                animations.push([k, k-1, "color-change-revert"]);
+                if (arr[k-1] > arr[k]) {
+                    animations.push([k, arr[k-1]], "height-change");
+                    animations.push([k-1, arr[k]], "height-change");
+                    let t = arr[k];
+                    arr[k] = arr[k-1];
+                    arr[k-1] = t;
+                }
+                
+            }
         }
-        animations.push([j + 1, current], "height-change");
-        arr[j + 1] = current;
     }
 }
