@@ -4,10 +4,11 @@
 }
 
 .sort-Container {
-    margin-top: 3rem;
+
 }
 
 .control {
+    margin-top: 20%;
     z-index: 100;
 }
 
@@ -22,8 +23,7 @@
 }
 
 .array-container {
-    margin-top: 5%;
+    margin-top: 2%;
     margin-left: 2%;
     width: 100%;
-
 }
