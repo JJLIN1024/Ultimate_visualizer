@@ -1,13 +1,12 @@
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
-const keys = require("./keys");
 const User = require("../models/user");
 
 passport.use(
     new GoogleStrategy(
         {
-            clientID: keys.google.GOOGLE_CLINET_ID,
-            clientSecret: keys.google.GOOGLE_CLINET_SECRET,
+            clientID: process.env.GOOGLE_CLINET_ID,
+            clientSecret: process.env.GOOGLE_CLINET_SECRET,
             callbackURL: "/auth/google/redirect",
         },
         (accessToken, refreshToken, profile, done) => {
